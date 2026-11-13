@@ -7,3 +7,11 @@
 
 /* Final legibility and validation refinements */
 h1{font-size:clamp(2.7rem,5.2vw,4.55rem)}.art-stamp strong{font-size:1.15rem}.invalid .input:focus{border-color:#b51430;box-shadow:0 0 0 4px #b5143018}.invalid label{color:#a80f28}.field:has(.input[aria-invalid="false"]):has(input[type="tel"]) .input:not(:placeholder-shown){border-color:#5c8064}@media(max-width:620px){h1{font-size:3.15rem}.art-stamp strong{font-size:1rem}}
+
+/* Exeter glass surfaces */
+.topbar{background:rgba(250,247,240,.64);backdrop-filter:blur(24px) saturate(155%);-webkit-backdrop-filter:blur(24px) saturate(155%);border-bottom:1px solid rgba(255,255,255,.68)}
+.role-card,.product-card,.review-block,.record{background:rgba(255,253,248,.73);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);border-color:rgba(255,255,255,.9);box-shadow:0 14px 42px rgba(93,44,29,.08),inset 0 1px 0 rgba(255,255,255,.95)}
+.art-badge,.modal{background:rgba(255,251,240,.76);backdrop-filter:blur(24px) saturate(150%);-webkit-backdrop-filter:blur(24px) saturate(150%);border:1px solid rgba(255,255,255,.8)}
+.hero-art img{border-radius:30px;aspect-ratio:1.18;object-position:69% center;box-shadow:0 22px 60px rgba(77,39,28,.15)}
+@media(max-width:620px){.hero-art img{aspect-ratio:1.5;object-position:72% center;border-radius:20px}.step-actions{background:rgba(250,247,240,.79)}}
+@media(prefers-reduced-transparency:reduce){.topbar,.role-card,.product-card,.review-block,.record,.art-badge,.modal,.step-actions{background:#fffaf0;backdrop-filter:none;-webkit-backdrop-filter:none}}
