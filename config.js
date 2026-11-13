@@ -1,0 +1,1 @@
+export const CONFIG = { endpoint: 'https://script.google.com/macros/s/AKfycbx36yMle5rt4koVzNzII24fuKgRM1DgOuzor97lfYf_RqZI3j-a1pALgfspcv0wmFtCeg/exec', backup: 'https://docs.google.com/forms/d/e/1FAIpQLSfDBtWrSrcmU2CnSHIYA0VYFN21nJ1y9gShn4pMOvEzuxvG6g/viewform', version:'1.0.0' };

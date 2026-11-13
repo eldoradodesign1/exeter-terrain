@@ -1,0 +1,1 @@
+{"name":"exeter-terrain","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"node tools/serve.mjs","test":"node --test tests/*.test.mjs"}}
