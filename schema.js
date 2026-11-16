@@ -1,6 +1,8 @@
 ﻿export const FORMATS=['Petite boîte · 198 g','Moyenne boîte · 200 g','Grande boîte · 340 g'];
 export const MARKETS=['Cité verte','Gambela','Liberté','Ngaba','Selembao','UPN','Zando','Zigida','Autre'];
 export const COMPETITORS=['Bill Beef','Bravo','Texas Corned Beef','Royal Corned Beef','Anglo Corned Beef','Ox & Palm',"Libby's",'Hereford','Autre','Ne sait pas'];
+// Enquêteurs affectés au survey : liste par défaut, remplacée au démarrage par celle de la base (survey_collectors_public).
+export const COLLECTORS=['Alpha Okito','Hervé Ntalu','Serge Kisend','Shekinah Sita'];
 export const PHONE_PATTERN=/^(?:\+?243|0)? ?\d{3}[ -]?\d{3}[ -]?\d{3,4}$/;
 const yes=['Oui','Non'];
 const f=(id,label,type='text',options=[],when=null,required=false,hint='')=>({id,label,type,options,when,required,hint});
@@ -8,7 +10,7 @@ const isVendor=a=>a.role==='Vendeur';
 const active=a=>isVendor(a)&&a.vendorKnows==='Oui'&&a.sells==='Oui';
 export const STEPS=[
 {id:'terrain',title:'Chaque rencontre compte.',eyebrow:'01 · Le point de départ',desc:'Posez le décor de votre entretien.',icon:'pin',fields:[
-f('market','Dans quel marché êtes-vous ?','choice',MARKETS,null,true),f('marketOther','Précisez le marché','text',[],a=>a.market==='Autre',true),f('ba','Nom de l’enquêteur','text',[],null,true),
+f('market','Dans quel marché êtes-vous ?','choice',MARKETS,null,true),f('marketOther','Précisez le marché','text',[],a=>a.market==='Autre',true),f('ba','Nom de l’enquêteur','choice',COLLECTORS,null,true,'Choisissez votre nom : l’entretien sera rattaché à votre compte Orbit.'),
 f('outlet','Nom ou code du point de vente','text',[],isVendor,true),f('trade','Type de commerce','choice',['Grossiste','Détaillant','Étal','Autre'],isVendor,true),f('tradeOther','Précisez le type de commerce','text',[],a=>isVendor(a)&&a.trade==='Autre',true),
 f('observed','Quels formats Exeter voyez-vous sur place ?','multi',[...FORMATS,'Aucun produit observé'],isVendor,false,'Vous pouvez sélectionner plusieurs formats.'),f('contactConsent','Le vendeur accepte-t-il de donner son contact ?','choice',yes,isVendor,true),f('contact','Numéro du vendeur','tel',[],a=>isVendor(a)&&a.contactConsent==='Oui',false,'Facultatif · Ex. : +243 812 345 678 ou 0812345678') ]},
 {id:'relation',title:'Exeter et vous.',eyebrow:'02 · Faisons connaissance',desc:'Une première question pour prendre le bon chemin.',icon:'can',fields:[
