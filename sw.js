@@ -1,4 +1,4 @@
-const CACHE='exeter-v2';
+const CACHE='exeter-v3';
 const FILES=['./','./index.html','./style.css','./app.js','./schema.js','./config.js','./manifest.webmanifest','./assets/market.svg','./assets/exeter-hero.png','./assets/icon.svg','./assets/icon-192.png','./assets/icon-512.png'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES))));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('exeter-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
