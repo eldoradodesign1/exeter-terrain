@@ -2,7 +2,7 @@
 
 PWA française de collecte terrain, destinée aux enquêteurs de la campagne Exeter à Kinshasa.
 
-**Application :** https://eldoradodesign1.github.io/exeter-terrain/
+**Application :** https://eldoradodesign1.github.io/exeter-terrain/ — redirige désormais vers Orbit - Tracker (https://btl-africa.pages.dev/BTL-Vodacom-privileg-tracker/), qui relève la position GPS de chaque vendeur. La redirection attend que plus aucun entretien ne soit en attente d’envoi ni en cours sur l’appareil.
 
 **Formulaire de secours :** https://docs.google.com/forms/d/e/1FAIpQLSfDBtWrSrcmU2CnSHIYA0VYFN21nJ1y9gShn4pMOvEzuxvG6g/viewform
 
